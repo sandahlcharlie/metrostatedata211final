@@ -9,3 +9,26 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Libraries
+```{r}
+library(tidyverse)
+```
+
+# Data
+```{r}
+bikeData = read.csv("~/R/METRO DATA 211 SPRING 2025/final_project/bike_trips.csv")
+```
+
+$\mu$ is the average time it takes to commute to work on my bike
+
+$H_0$: $\mu_1$ = $\mu_2$ = $\mu_3$
+
+$H_a$: $\mu1 \ne \mu_2$ 
+
+# AVNOVA test
+```{r}
+anova = aov(time ~path, data = bikeData)
+summary(anova)
+```
+
+$p-value = 0.316$ which is greater than $\alpha=0.05$. We fail to reject the $H_0$. So, at $5\%$ significance level, we do not have enough evidence to conclude that the average commute time is significantly different between the three routes.
