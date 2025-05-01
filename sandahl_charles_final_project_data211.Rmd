@@ -1,0 +1,11 @@
+---
+title: "Final Project Data 211"
+author: "Charles Sandahl"
+date: "2025-04-30"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
